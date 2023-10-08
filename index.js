@@ -1,9 +1,14 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const app = express();
 
+app.use(cors({
+  origin: "*",
+  methods: "GET,POST",
+}));
 app.use(bodyParser.json());
 
 app.post("/send-email", function (req, res) {
