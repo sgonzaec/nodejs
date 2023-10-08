@@ -27,7 +27,7 @@ app.post("/send-email", function (req, res) {
     if (req.body.email === "" || req.body.email === undefined || req.body.email === null) {
       res.status(400).jsonp({
         status: "error",
-        message: "El nombre es obligatorio." 
+        message: "El correo es obligatorio." 
       });
     } else {
       if (error) {
